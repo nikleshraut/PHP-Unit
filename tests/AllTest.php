@@ -1,10 +1,15 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
+class Dummy
+{
+    public $foo;
+}
+
 class AllTest extends TestCase
 {
-    public function testArrayHasKey()
+    public function testAll()
     {
-        $this->assertArrayHasKey('aa',['aa'=>111,'bb'=>222]);
+        $this->assertClassHasAttribute('foo','Dummy');
     }
 }
